@@ -1,4 +1,4 @@
-# openCollege
+# OpenCollege
 Session for open college
 
 ## session
