@@ -1,0 +1,294 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>OpenCollege - Bot 개발로 시작하는 프로그래밍 #0</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+                <section>
+                    <h3>Open College - <br/>Bot개발로 시작하는 프로그래밍 프로젝트</h3>
+                    <h4>Session #0 2019/06/14</h4>
+                    <p>
+                    <small>Created by <a href="https://mossol.net">Amos Dawn</a></small>
+                    </p>
+                </section>
+				<section>
+
+                    <section data-markdown>
+                        <textarea data-template>
+                            ## Today's TODO 
+
+                            * (40 min.) Server - Client란? REST API란?
+                             * (10 min.) Break time
+                            * (40 min.) Python Grammer Review - 프로그램의 흐름을 느껴보자
+                             * (10 min.) Break time
+                            * (40 min.) Free coding time - Flask의 기초
+                        </textarea>
+                    </section>
+
+                    <section data-markdown>
+                        <textarea data-template>
+                            ## Today's Objective 
+
+                            * Server와 Client의 개념을 이해해보자
+                            * HTTP Protocol에 대해서 알아보자
+                            * 프로그램의 흐름에 대해 이해해보자
+                            * Flask로 간단한 Server를 만들어보자
+                        </textarea>
+                    </section>
+
+                </section>
+                <section>
+
+                    <section data-markdown>
+                        <textarea data-template>
+                            ## Computer Networking 
+
+                            * 태초의 Computer는 그냥 계산만 하는 기계
+                            * Computer와 Computer 사이의 통신에 대한 Needs가
+                            생기기 시작
+                        </textarea>
+                    </section>
+
+                    <section data-markdown>
+                        <textarea data-template>
+                            ## Computer Networking (Cont.d) 
+
+                            * Computer와 Computer 사이에 어떠한 방법으로 통신을
+                            할지 규칙이 필요함
+                        </textarea>
+                    </section>
+
+                    <section data-markdown>
+                        <textarea data-template>
+                            ## Server & Client 
+
+                            * Server - 다른 Computer에 서비스를 제공하는
+                            프로그램 혹은 Computer
+                             * Web Server, Application Server, File Server, Game Server
+                            * Client - Service 혹은 Resource를 다른 프로그램에게 요청하는 Program
+                             * Web Browser, FTP Client, Game Client
+
+                            <img src="./images/server-client.png" width="10%"/>
+                        </textarea>
+                    </section>
+
+                    <section data-markdown>
+                        <textarea data-template>
+                            ## Networking Protocol 
+
+                            * 약속된 통신 방법
+                             * http, http, TCP/IP, ftp, ssh (...)
+                        </textarea>
+                    </section>
+
+                    <section data-markdown>
+                        <textarea data-template>
+                            ## HTTP Protocol 
+
+                            * HTML 문서와 같은 리소스를 가져울 수 있도록 해주는
+                            Protocol 
+
+                            <img src="./images/http_protocol.png" width="10%"/>
+                        </textarea>
+                    </section>
+
+                    <section data-markdown>
+                        <textarea data-template>
+                            ## Web Server 
+                            
+                            * Web Resource를 제공하는 Server (정적 Data를 Serving)
+                             * Apache Web Server, Nginx Server, IIS
+                        </textarea>
+                    </section>
+
+                    <section data-markdown>
+                        <textarea data-template>
+                            ## Web Application Server 
+
+                            * Business Logic을 실행한 결과를 제공하는 Server (동적 Data를 Serving)
+                             * Apache Tomcat, PHP Module on Web Server, Eclipse Jetty 
+                        </textarea>
+                    </section>
+
+                    <section data-markdown>
+                        <textarea data-template>
+                            ## HTTP Flow 
+                            
+                            * HTTP Request와 그에 대한 Response로 구성
+                            * Request와 Response는 HTTP Message이며, Header와 Body로 구성됨 
+
+                            <img src="./images/HTTP_Request.png" width="10%"/>
+                            <img src="./images/HTTP_Response.png" width="10%"/>
+                        </textarea>
+                    </section>
+
+                    <section data-markdown>
+                        <textarea data-template>
+                            ## HTTP Message Example
+                            
+                            ```
+                            curl -X GET -L http://naver.com
+                            ---
+                            > GET / HTTP/1.1
+                            > Host: naver.com
+                            > User-Agent: curl/7.54.0
+                            > Accept: */*
+                            ```
+
+                            ```
+                            < HTTP/2 200
+                            < server: NWS
+                            < date: Sun, 09 Jun 2019 06:15:02 GMT
+                            < content-type: text/html; charset=UTF-8
+                            ```
+                        </textarea>
+                    </section>
+
+                    <section data-markdown>
+                        <textarea data-template>
+                            ## HTTP Response Code 
+                           
+                            * 200 OK : 요청에 대한 처리가 성공
+                            * 404 Not Found : 요청받은 Resource가 없음
+                            * 500 Internal Server Error : 서버 내부 요류
+                            * https://developer.mozilla.org/ko/docs/Web/HTTP/Status
+                        </textarea>
+                    </section>
+
+                    <section data-markdown>
+                        <textarea data-template>
+                            ## REST API 
+                            
+                            * Roy Fielding - Architectural Styles and the Design of Network-based Software Architectures
+                            * HTTP 프로토콜의 의도에 맞게 활용될 수 있는 API 설계 방법
+
+                            ```
+                            * URI는 자원을 표현해야 한다.
+                            * 자원에 연산은 Http Method (GET / POST / DELETE ...)로 표현한다.
+                            ```
+                        </textarea>
+                    </section>
+
+                    <section data-markdown>
+                        <textarea data-template>
+                            ## Reference 
+                            
+                            * Roy Fielding - Architectural Styles and the Design of Network-based Software Architectures
+                            * https://developer.mozilla.org
+                        </textarea>
+                    </section>
+
+                </section>
+                <section>
+                    <section data-markdown>
+                        <textarea data-template>
+                            ## Introduction to Python 
+
+                            ### Program의 흐름에 대해 느껴보자
+                        </textarea>
+                    </section>
+                    <section data-markdown>
+                        <textarea data-template>
+                            ## Program이란?? 
+
+                        </textarea>
+                    </section>
+                    <section data-markdown>
+                        <textarea data-template>
+                            ## 정보를 담는 그릇 변수에 대해 알아보자 
+
+
+                        </textarea>
+                    </section>
+                    <section data-markdown>
+                        <textarea data-template>
+                            ## 정보를 처리하는 조리도구 함수에 대해 알아보자 
+
+                        </textarea>
+                    </section>
+                    <section data-markdown>
+                        <textarea data-template>
+                            ## 흐름을 변화시키는 If 문에 대해 알아보자 
+
+                        </textarea>
+                    </section>
+                    <section data-markdown>
+                        <textarea data-template>
+                            ## 흐름을 반복하는 For문에 대해 알아보자 
+
+                        </textarea>
+                    </section>
+                    <section data-markdown>
+                        <textarea data-template>
+                            ## Reference
+
+                            * 
+                        </textarea>
+                    </section>
+                </section>
+                <section>
+                    <section data-markdown>
+                        ## Flask로 Web Application Server 구성해보기
+                    </section>
+                    <section data-markdown>
+                        ## Flask Python Library 설치 
+                    </section>
+                    <section data-markdown>
+                        ## Flask Python Library 설치 
+                    </section>
+                    <section data-markdown>
+                        ## Hello World API 만들기 
+                    </section>
+                    <section data-markdown>
+                        ## Counting API 만들기 
+                    </section>
+                </section>
+                <section style="text-align: left;">
+                    <h1>THE END</h1>
+                    <h2>Is there any questions?</h2>
+                    <p>
+                    - <a href="mailto:amos.doan@gmail.com">amos.doan@gmail.com</a> <br>
+                    - <a href="https://mossol.net">mossol.net</a> <br>
+                    </p>
+                </section>
+            </div>
+        </div>
+
+        <script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
