@@ -32,17 +32,23 @@
                     <small>Created by <a href="https://mossol.net">Amos Dawn</a></small>
                     </p>
                 </section>
-				<section>
 
+                <section>
+                    <h3>근황 Talk</h3>
+                    <h4>다들 2주간 잘 지내셨나요?</h4>
+                </section>
+
+				<section>
+                
                     <section data-markdown>
                         <textarea data-template>
                             ## Today's TODO 
 
-                            * (40 min.) Server - Client란? REST API란?
-                             * (10 min.) Break time
-                            * (40 min.) Python Grammer Review - 프로그램의 흐름을 느껴보자
-                             * (10 min.) Break time
-                            * (40 min.) Free coding time - Flask의 기초
+                            * <bdi style="color:skyblue;">[40 min.]</bdi> Server - Client란? REST API란?
+                             * <bdi style="color:skyblue;">[10 min.]</bdi> Break time
+                            * <bdi style="color:skyblue;">[40 min.]</bdi> Python Grammer Review - 프로그램의 흐름을 느껴보자
+                             * <bdi style="color:skyblue;">[10 min.]</bdi> Break time
+                            * <bdi style="color:skyblue;">[40 min.]</bdi> Free coding time - Flask의 기초
                         </textarea>
                     </section>
 
@@ -50,10 +56,10 @@
                         <textarea data-template>
                             ## Today's Objective 
 
-                            * Server와 Client의 개념을 이해해보자
-                            * HTTP Protocol에 대해서 알아보자
+                            * <bdi style="color:skyblue;">Server</bdi>와 <bdi style="color:skyblue;">Client</bdi>의 개념을 이해해보자
+                            * <bdi style="color:skyblue;">HTTP Protocol</bdi>에 대해서 알아보자
                             * 프로그램의 흐름에 대해 이해해보자
-                            * Flask로 간단한 Server를 만들어보자
+                            * <bdi style="color:skyblue;">Flask</bdi>로 간단한 <bdi style="color:skyblue;">Server</bdi>를 만들어보자
                         </textarea>
                     </section>
 
@@ -62,17 +68,19 @@
 
                     <section data-markdown>
                         <textarea data-template>
-                            ## Computer Networking 
+                            ### Computer Network
 
                             * 태초의 Computer는 그냥 계산만 하는 기계
-                            * Computer와 Computer 사이의 통신에 대한 Needs가
-                            생기기 시작
+                            * Computer와 Computer 사이의 통신에 대한 Needs가 생기기 시작
+                             * Internet - Network의 Network
+
+                            <img src="./images/internet.jpg" width="50%"/>
                         </textarea>
                     </section>
 
                     <section data-markdown>
                         <textarea data-template>
-                            ## Computer Networking (Cont.d) 
+                            ### Computer Network (Cont.d) 
 
                             * Computer와 Computer 사이에 어떠한 방법으로 통신을
                             할지 규칙이 필요함
@@ -81,21 +89,18 @@
 
                     <section data-markdown>
                         <textarea data-template>
-                            ## Server & Client 
+                            ### Server & Client 
 
-                            * Server - 다른 Computer에 서비스를 제공하는
-                            프로그램 혹은 Computer
+                            * Server - 다른 Computer에 서비스를 제공하는 프로그램 혹은 Computer
                              * Web Server, Application Server, File Server, Game Server
                             * Client - Service 혹은 Resource를 다른 프로그램에게 요청하는 Program
                              * Web Browser, FTP Client, Game Client
-
-                            <img src="./images/server-client.png" width="10%"/>
                         </textarea>
                     </section>
 
                     <section data-markdown>
                         <textarea data-template>
-                            ## Networking Protocol 
+                            ### Networking Protocol 
 
                             * 약속된 통신 방법
                              * http, http, TCP/IP, ftp, ssh (...)
@@ -104,7 +109,7 @@
 
                     <section data-markdown>
                         <textarea data-template>
-                            ## HTTP Protocol 
+                            ### HTTP Protocol 
 
                             * HTML 문서와 같은 리소스를 가져울 수 있도록 해주는
                             Protocol 
@@ -115,7 +120,7 @@
 
                     <section data-markdown>
                         <textarea data-template>
-                            ## Web Server 
+                            ### Web Server 
                             
                             * Web Resource를 제공하는 Server (정적 Data를 Serving)
                              * Apache Web Server, Nginx Server, IIS
@@ -124,7 +129,7 @@
 
                     <section data-markdown>
                         <textarea data-template>
-                            ## Web Application Server 
+                            ### Web Application Server 
 
                             * Business Logic을 실행한 결과를 제공하는 Server (동적 Data를 Serving)
                              * Apache Tomcat, PHP Module on Web Server, Eclipse Jetty 
@@ -133,7 +138,7 @@
 
                     <section data-markdown>
                         <textarea data-template>
-                            ## HTTP Flow 
+                            ### HTTP Flow 
                             
                             * HTTP Request와 그에 대한 Response로 구성
                             * Request와 Response는 HTTP Message이며, Header와 Body로 구성됨 
@@ -145,7 +150,7 @@
 
                     <section data-markdown>
                         <textarea data-template>
-                            ## HTTP Message Example
+                            ### HTTP Message Example
                             
                             ```
                             curl -X GET -L http://naver.com
@@ -167,21 +172,41 @@
 
                     <section data-markdown>
                         <textarea data-template>
-                            ## HTTP Response Code 
+                            ### HTTP Response Code 
                            
-                            * 200 OK : 요청에 대한 처리가 성공
-                            * 404 Not Found : 요청받은 Resource가 없음
-                            * 500 Internal Server Error : 서버 내부 요류
+                            <table>
+                                <thead>
+                                    <tr>
+                                        Status Code
+                                    </tr>
+                                    <tr>
+                                        Description
+                                    </tr>
+                                </thead>
+                                <tr>
+                                    <td>200 OK</td>
+                                    <td>요청에 대한 처리가 성공</td>
+                                </tr>
+                                <tr>
+                                    <td>404 Not Found</td>
+                                    <td>요청받은 Resource가 없음</td>
+                                </tr>
+                                <tr>
+                                    <td>500 Internal Server Error</td>
+                                    <td>서버 내부 요류</td>
+                                </tr>
+                            </table>
+
                             * https://developer.mozilla.org/ko/docs/Web/HTTP/Status
                         </textarea>
                     </section>
 
                     <section data-markdown>
                         <textarea data-template>
-                            ## REST API 
+                            ### REST API (Advanced)
                             
                             * Roy Fielding - Architectural Styles and the Design of Network-based Software Architectures
-                            * HTTP 프로토콜의 의도에 맞게 활용될 수 있는 API 설계 방법
+                            * HTTP 프로토콜의 의도에 맞게 활용될 수 있는 API 설계 방법 혹은 철학
 
                             ```
                             * URI는 자원을 표현해야 한다.
@@ -210,58 +235,131 @@
                     </section>
                     <section data-markdown>
                         <textarea data-template>
-                            ## Program이란?? 
+                            ### Program이란?? 
+
+                            * 요리의 레시피와 같은 것
+                            * 요리 재료 - 변수
+                            * 요리 방법 - 로직
+                        </textarea>
+                    </section>
+                    <section data-markdown>
+                        <textarea data-template>
+                            ### 일반적인 Program의 흐름 
+
+                            ```
+                            if 새로운메시지가 왔다:
+                                새로운 메시지를 보여준다.
+                            if 누군가 내 번호를 추가했다:
+                                추천인 리스트에 그 누군가를 보여준다
+                            if 채팅방을 터치했다:
+                                채팅방 화면을 보여준다
+                            ```
+                        </textarea>
+                    </section>
+
+                    <section data-markdown>
+                        <textarea data-template>
+                            ### 정보를 담는 그릇 변수에 대해 알아보자 
+
+                            ```
+                            a = 1
+                            b = "I'm Dohan Kim"
+                            a = a + 1
+                            ```
 
                         </textarea>
                     </section>
                     <section data-markdown>
                         <textarea data-template>
-                            ## 정보를 담는 그릇 변수에 대해 알아보자 
+                            ### 정보를 처리하는 조리도구 함수에 대해 알아보자 
 
-
-                        </textarea>
-                    </section>
-                    <section data-markdown>
-                        <textarea data-template>
-                            ## 정보를 처리하는 조리도구 함수에 대해 알아보자 
+                            ```
+                            def add(a, b):
+                                return a + b
+                            ```
 
                         </textarea>
                     </section>
                     <section data-markdown>
                         <textarea data-template>
-                            ## 흐름을 변화시키는 If 문에 대해 알아보자 
+                            ### 흐름을 변화시키는 If 문에 대해 알아보자 
 
+                            ```
+                            a = 2
+                            if a % 2 == 0:
+                                print('짝수입니다')
+                            else
+                                print('홀수입니다')
+                            ```
                         </textarea>
                     </section>
                     <section data-markdown>
                         <textarea data-template>
-                            ## 흐름을 반복하는 For문에 대해 알아보자 
+                            ### 흐름을 반복하는 For문에 대해 알아보자 
 
+                            ```
+                            for i in range(1, 10)
+                              print("*" * i)
+                            ```
                         </textarea>
                     </section>
                     <section data-markdown>
                         <textarea data-template>
                             ## Reference
 
-                            * 
+                            * https://wikidocs.net
                         </textarea>
                     </section>
                 </section>
                 <section>
                     <section data-markdown>
-                        ## Flask로 Web Application Server 구성해보기
+                        ### Flask로 Web Application Server 구성해보기
                     </section>
                     <section data-markdown>
-                        ## Flask Python Library 설치 
+                        ### Flask Python Library 설치 
+
+                        ```
+                        pip install flask
+                        ```
+
+                        OR
+
+                        ```
+                        File > Settings > Project > Project Interpreter
+                        ```
+
                     </section>
                     <section data-markdown>
-                        ## Flask Python Library 설치 
+                        ### Home Page 만들기 
+
+                        ```
+                        from flask import Flask
+
+                        app = Flask(__name__)
+
+                        @app.route('/')
+                        def index():
+                        return 'this is my homepage!'
+
+                        if __name__ == '__main__':
+                            app.run('0.0.0.0:8000', debug=True)
+                        ```
                     </section>
                     <section data-markdown>
-                        ## Hello World API 만들기 
-                    </section>
-                    <section data-markdown>
-                        ## Counting API 만들기 
+                        ### 도전 과제 : Counting API 만들기 
+
+                        ```
+                        당신은 1번째 방문객입니다! 축하합니다!
+
+                        ```
+
+                        ```
+                        당신은 2번째 방문객입니다!
+                        ```
+
+                        ```
+                        당신은 n번째 방문객입니다!
+                        ```
                     </section>
                 </section>
                 <section style="text-align: left;">
