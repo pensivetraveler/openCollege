@@ -114,7 +114,7 @@
                             * HTML 문서와 같은 리소스를 가져울 수 있도록 해주는
                             Protocol 
 
-                            <img src="./images/http_protocol.png" width="10%"/>
+                            <img src="./images/http_protocol.png" width="50%"/>
                         </textarea>
                     </section>
 
@@ -143,8 +143,8 @@
                             * HTTP Request와 그에 대한 Response로 구성
                             * Request와 Response는 HTTP Message이며, Header와 Body로 구성됨 
 
-                            <img src="./images/HTTP_Request.png" width="10%"/>
-                            <img src="./images/HTTP_Response.png" width="10%"/>
+                            <img src="./images/HTTP_Request.png" width="30%"/>
+                            <img src="./images/HTTP_Response.png" width="30%"/>
                         </textarea>
                     </section>
 
@@ -176,12 +176,12 @@
                            
                             <table>
                                 <thead>
-                                    <tr>
+                                    <td>
                                         Status Code
-                                    </tr>
-                                    <tr>
+                                    </td>
+                                    <td>
                                         Description
-                                    </tr>
+                                    </td>
                                 </thead>
                                 <tr>
                                     <td>200 OK</td>
@@ -217,14 +217,35 @@
 
                     <section data-markdown>
                         <textarea data-template>
+                            ### REST API (Advanced) (Cont.d)
+
+                            * 바람직한 예
+                            ```
+                            POST /people {"name" : "DohanKim", "job" : "programmer"}
+                            GET /people/0
+                            PUT /peop/0 {"job" : "baeksu"}
+                            ```
+
+                            * 바람직하지 않은 예
+                            ```
+                            POST /people/add/ {"name" : "DohanKim", "job" : "programmer"}
+                            GET /people/get/0 {"name" : "DohanKim", "job" : "programmer"}
+                            ```
+                        </textarea>
+                    </section>
+
+
+                    <section data-markdown>
+                        <textarea data-template>
                             ## Reference 
-                            
+
                             * Roy Fielding - Architectural Styles and the Design of Network-based Software Architectures
                             * https://developer.mozilla.org
                         </textarea>
                     </section>
 
                 </section>
+                
                 <section>
                     <section data-markdown>
                         <textarea data-template>
@@ -248,11 +269,11 @@
 
                             ```
                             if 새로운메시지가 왔다:
-                                새로운 메시지를 보여준다.
+                            새로운 메시지를 보여준다.
                             if 누군가 내 번호를 추가했다:
-                                추천인 리스트에 그 누군가를 보여준다
+                            추천인 리스트에 그 누군가를 보여준다
                             if 채팅방을 터치했다:
-                                채팅방 화면을 보여준다
+                            채팅방 화면을 보여준다
                             ```
                         </textarea>
                     </section>
@@ -271,15 +292,42 @@
                     </section>
                     <section data-markdown>
                         <textarea data-template>
-                            ### 정보를 처리하는 조리도구 함수에 대해 알아보자 
+                            ### 정보 처리 조리도구 함수에 대해 알아보자 
 
-                            ```
-                            def add(a, b):
-                                return a + b
-                            ```
+                            <pre>
+                            <code class="hljs" data-trim>
+                            a = 1
+                            print('홀수입니다.')
+                            b = 2
+                            print('짝수입니다.')
+                            c = 100
+                            print('짝수입니다.')
+                            </code>
+                            </pre>
 
                         </textarea>
                     </section>
+                    <section data-markdown>
+                        <textarea data-template>
+                            ### 정보 처리 조리도구 함수에 대해 알아보자 (Cont.d)
+
+                            <pre>
+                            <code class="hljs" data-trim>
+                            def holzzak(a):
+                                if a % 2 == 0:
+                                    print('짝수입니다.')
+                                else
+                                    print('홀수입니다.')
+
+                            holzzak(1)
+                            holzzak(2)
+                            holzzak(100)
+                            </code>
+                            </pre>
+
+                        </textarea>
+                    </section>
+
                     <section data-markdown>
                         <textarea data-template>
                             ### 흐름을 변화시키는 If 문에 대해 알아보자 
@@ -287,19 +335,39 @@
                             ```
                             a = 2
                             if a % 2 == 0:
-                                print('짝수입니다')
+                            print('짝수입니다')
                             else
-                                print('홀수입니다')
+                            print('홀수입니다')
                             ```
                         </textarea>
                     </section>
+
                     <section data-markdown>
                         <textarea data-template>
                             ### 흐름을 반복하는 For문에 대해 알아보자 
 
                             ```
+                            print('*')
+                            print('**')
+                            print('***')
+                            print('****')
+                            print('*****')
+                            print('******')
+                            print('*******')
+                            print('********')
+                            print('*********')
+                            print('**********')
+                            ```
+                        </textarea>
+                    </section>
+
+                    <section data-markdown>
+                        <textarea data-template>
+                            ### 흐름을 반복하는 For문에 대해 알아보자 (Cont.d)
+
+                            ```
                             for i in range(1, 10)
-                              print("*" * i)
+                            print("*" * i)
                             ```
                         </textarea>
                     </section>
@@ -342,7 +410,7 @@
                         return 'this is my homepage!'
 
                         if __name__ == '__main__':
-                            app.run('0.0.0.0:8000', debug=True)
+                        app.run('0.0.0.0:8000', debug=True)
                         ```
                     </section>
                     <section data-markdown>
@@ -375,18 +443,19 @@
 
         <script src="js/reveal.js"></script>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true }
-				]
-			});
-		</script>
-	</body>
+        <script>
+            // More info about config & dependencies:
+            // - https://github.com/hakimel/reveal.js#configuration
+            // - https://github.com/hakimel/reveal.js#dependencies
+            Reveal.initialize({
+                              hash: true,
+                              dependencies: [
+                                  { src: 'plugin/markdown/marked.js' },
+                                  { src: 'plugin/markdown/markdown.js' },
+                                  { src: 'plugin/notes/notes.js', async: true },
+                                  { src: 'plugin/highlight/highlight.js', async: true }
+                              ]
+            });
+        </script>
+    </body>
 </html>
