@@ -34,8 +34,21 @@
                 </section>
 
                 <section>
-                    <h3>근황 Talk</h3>
-                    <h4>다들 2주간 잘 지내셨나요?</h4>
+                    <section>
+                        <h3>근황 Talk</h3>
+                        <h4>다들 2주간 잘 지내셨나요?</h4>
+                    </section>
+
+                    <section data-markdown>
+                        <textarea data-template>
+                        ### Programming 돈내고 배우지 마세요!
+
+                        * http://opentutorials.org
+                         * 다양한 주제, 운영자가 비전공자
+                        * https://olc.kr/main/index.jsp
+                         * 컴퓨터 공학 전공지식 및 실무에 대한 내용이 풍부함
+                        </textarea>
+                    </section>
                 </section>
 
 				<section>
@@ -74,16 +87,6 @@
                             * Computer와 Computer 사이의 통신에 대한 Needs가 생기기 시작
                              * Internet - Network의 Network
 
-                            <img src="./images/internet.jpg" width="50%"/>
-                        </textarea>
-                    </section>
-
-                    <section data-markdown>
-                        <textarea data-template>
-                            ### Computer Network (Cont.d) 
-
-                            * Computer와 Computer 사이에 어떠한 방법으로 통신을
-                            할지 규칙이 필요함
                         </textarea>
                     </section>
 
@@ -91,9 +94,11 @@
                         <textarea data-template>
                             ### Server & Client 
 
-                            * Server - 다른 Computer에 서비스를 제공하는 프로그램 혹은 Computer
+                            * Server 
+                             * 다른 Computer에 서비스를 제공하는 Program 
                              * Web Server, Application Server, File Server, Game Server
-                            * Client - Service 혹은 Resource를 다른 프로그램에게 요청하는 Program
+                            * Client 
+                             * Service 혹은 Resource를 다른 프로그램에게 요청하는 Program
                              * Web Browser, FTP Client, Game Client
                         </textarea>
                     </section>
@@ -102,7 +107,10 @@
                         <textarea data-template>
                             ### Networking Protocol 
 
-                            * 약속된 통신 방법
+                            * Computer와 Computer 사이에 어떠한 방법으로 통신을
+                            할지 규칙이 필요함
+                            * Data를 언제 어떻게 전송할 것인지? 약속을 하자!
+                             * 즉, 약속된 통신 방법
                              * http, http, TCP/IP, ftp, ssh (...)
                         </textarea>
                     </section>
@@ -122,7 +130,8 @@
                         <textarea data-template>
                             ### Web Server 
                             
-                            * Web Resource를 제공하는 Server (정적 Data를 Serving)
+                            * Web Resource를 제공하는 Server 
+                             * 정적 Data를 Serving
                              * Apache Web Server, Nginx Server, IIS
                         </textarea>
                     </section>
@@ -131,7 +140,8 @@
                         <textarea data-template>
                             ### Web Application Server 
 
-                            * Business Logic을 실행한 결과를 제공하는 Server (동적 Data를 Serving)
+                            * Business Logic을 실행한 결과를 제공하는 Server 
+                             * 동적 Data를 Serving
                              * Apache Tomcat, PHP Module on Web Server, Eclipse Jetty 
                         </textarea>
                     </section>
@@ -381,7 +391,9 @@
                 </section>
                 <section>
                     <section data-markdown>
-                        ### Flask로 Web Application Server 구성해보기
+                        ### Flask로 Web Application Server 
+
+                        * Bot 개발을 위한 첫걸음
                     </section>
                     <section data-markdown>
                         ### Flask Python Library 설치 
@@ -414,7 +426,12 @@
                         ```
                     </section>
                     <section data-markdown>
-                        ### 도전 과제 : Counting API 만들기 
+                        ### 도전 과제 : 추억의 싸이월드 Today 만들기 
+
+                        * http://localhost:8000/visit 호출시 다음과 같이
+                        출력하는 홈페이지
+
+                         * 첫 방문 시는 축하합니다!를 출력하자
 
                         ```
                         당신은 1번째 방문객입니다! 축하합니다!
