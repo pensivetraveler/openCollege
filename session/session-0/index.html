@@ -47,6 +47,8 @@
                          * 다양한 주제, 운영자가 비전공자
                         * https://olc.kr/main/index.jsp
                          * 컴퓨터 공학 전공지식 및 실무에 대한 내용이 풍부함
+                        * https://wikidocs.net/
+                         * 점프투파이썬 등 기타 책으로 출간된 프로그래밍 문서
                         </textarea>
                     </section>
                 </section>
@@ -85,6 +87,7 @@
 
                             * 태초의 Computer는 그냥 계산만 하는 기계
                             * Computer와 Computer 사이의 통신에 대한 Needs가 생기기 시작
+                             * 다양한 Computer Network가 등장
                              * Internet - Network의 Network
 
                         </textarea>
@@ -270,7 +273,9 @@
 
                             * 요리의 레시피와 같은 것
                             * 요리 재료 - 변수
+                             * 재료들을 어떻게 저장하지?
                             * 요리 방법 - 로직
+                             * 요리재료(변수)를 가지고 어떻게 요리하지?
                         </textarea>
                     </section>
                     <section data-markdown>
@@ -279,11 +284,12 @@
 
                             ```
                             if 새로운메시지가 왔다:
-                            새로운 메시지를 보여준다.
+                              새로운 메시지를 보여준다.
                             if 누군가 내 번호를 추가했다:
-                            추천인 리스트에 그 누군가를 보여준다
+                              추천인 리스트에 그 누군가를 보여준다
                             if 채팅방을 터치했다:
-                            채팅방 화면을 보여준다
+                              채팅방 화면을 보여준다
+                            exit
                             ```
                         </textarea>
                     </section>
@@ -293,30 +299,92 @@
                             ### 정보를 담는 그릇 변수에 대해 알아보자 
 
                             ```
+                            // 숫자를 저장할 수 있다!
                             a = 1
-                            b = "I'm Dohan Kim"
+                            // 변수는 사칙연산을 할 수 있다!
                             a = a + 1
+                            // 문자열도 저장할 수 있다!
+                            b = "I'm Dohan Kim"
+                            c = " and I'm a programmer"
+                            // 문자열의 덧셈은 이어붙이기다!
+                            result = b + c
                             ```
 
                         </textarea>
                     </section>
+
+                    <section data-markdown>
+                        <textarea data-template>
+                            ### 변수를 입력받아보자 
+
+                            * 깜장화면으로부터 입력을 받는 것을 표준 입력이라한다.
+                            * 깜장화면으로 출력하는 것을 표준 출력이라한다.
+
+                            ```
+                            a = input("Please input :")
+                            print(a)
+                            ```
+
+                        </textarea>
+                    </section>
+
                     <section data-markdown>
                         <textarea data-template>
                             ### 정보 처리 조리도구 함수에 대해 알아보자 
 
+                            * 함수는 인풋과 아웃풋이 있다!
+
+                            <pre class="hljs">
+                            // 함수 만들기
+                            def [함수이름] (인풋은 이런 것들이 있어요) :
+                              인풋을 지지고 볶고~
+                              return 아웃풋
+
+                            // 함수 호출
+                            [함수이름](인풋)
+                            </pre>
+                            
                             <pre>
                             <code class="hljs" data-trim>
-                            a = 1
-                            print('홀수입니다.')
-                            b = 2
-                            print('짝수입니다.')
-                            c = 100
-                            print('짝수입니다.')
+                            def add(a, b):
+                              return a + b
+
+                            a = 2
+                            b = 3
+                            result = add(a, b)
+                            print(result)
                             </code>
                             </pre>
 
                         </textarea>
                     </section>
+
+                    <section data-markdown>
+                        <textarea data-template>
+                            ### 변수의 유효 범위
+
+                            * 함수 내부에 있는 변수들은 로컬 변수라한다.
+                             * 로컬 변수는 함수내에서만 유효하다
+                            * 함수 외부에 있는 변수들은 전역 변수라한다.
+                             * 함수 내부에서 전역변수를 사용하기 위해서는 global을 붙여주자.
+                        
+                            ```
+                            num = 0
+
+                            def func(): 
+                              num++
+                              print(num)
+                              
+                            print(num)
+                            func(num)
+
+                            ```
+
+                        </textarea>
+                    </section>
+
+
+
                     <section data-markdown>
                         <textarea data-template>
                             ### 정보 처리 조리도구 함수에 대해 알아보자 (Cont.d)
@@ -326,7 +394,7 @@
                             def holzzak(a):
                                 if a % 2 == 0:
                                     print('짝수입니다.')
-                                else
+                                else:
                                     print('홀수입니다.')
 
                             holzzak(1)
@@ -345,9 +413,9 @@
                             ```
                             a = 2
                             if a % 2 == 0:
-                            print('짝수입니다')
-                            else
-                            print('홀수입니다')
+                              print('짝수입니다')
+                            else:
+                              print('홀수입니다')
                             ```
                         </textarea>
                     </section>
@@ -377,7 +445,7 @@
 
                             ```
                             for i in range(1, 10)
-                            print("*" * i)
+                              print("*" * i)
                             ```
                         </textarea>
                     </section>
@@ -419,10 +487,10 @@
 
                         @app.route('/')
                         def index():
-                        return 'this is my homepage!'
+                          return 'this is my homepage!'
 
                         if __name__ == '__main__':
-                        app.run('0.0.0.0:8000', debug=True)
+                          app.run()
                         ```
                     </section>
                     <section data-markdown>
