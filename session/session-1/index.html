@@ -1,0 +1,318 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>OpenCollege - Bot 개발로 시작하는 프로그래밍 #0</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/monokai.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h3>Open College - <br />Bot개발로 시작하는 프로그래밍 프로젝트</h3>
+                <h4>Session #1 2019/06/28</h4>
+                <p>
+                    <small>Created by <a href="https://mossol.net">Amos Dawn</a></small>
+                </p>
+            </section>
+
+            <section>
+                <section>
+                    <h3>근황 Talk</h3>
+                    <h4>다들 2주간 평안히 지내셨나요?</h4>
+                </section>
+
+                <section data-markdown>
+                    <textarea data-template>
+                            ## Today's TODO 
+
+                            * <bdi style="color:skyblue;">[20 min.]</bdi> Cloud란?
+                             * <bdi style="color:skyblue;">[10 min.]</bdi> Break time
+                            * <bdi style="color:skyblue;">[60 min.]</bdi> Jump To Python 연습문제 게릿 
+                             * <bdi style="color:skyblue;">[10 min.]</bdi> Break time
+                            * <bdi style="color:skyblue;">[20 min.]</bdi> Free coding time - Flask의 기초 복습
+                        </textarea>
+                </section>
+
+                <section data-markdown>
+                    <textarea data-template>
+                            ## Today's Objective 
+
+                            * 어디선가 많이 들어 본<bdi style="color:skyblue;">Cloud</bdi>의 개념을 이해해보자
+                            * Python 감을 잡아보자 
+                            * <bdi style="color:skyblue;">Flask</bdi>로 간단한 <bdi style="color:skyblue;">Server</bdi>를 만들어보자
+                        </textarea>
+                </section>
+            </section>
+
+            <section>
+                <section data-markdown>
+                    <textarea data-template>
+                            ### Cloud란? 
+
+                            * Cloud의 대표적인 회사와 서비스들 
+                             * Google, Amazon, ...
+
+                        </textarea>
+                </section>
+
+                <section data-markdown>
+                    <textarea data-template>
+                            ### Cloud 개념
+
+                            * Cloud의 대표적인 회사와 서비스들 
+
+                        </textarea>
+                </section>
+
+                <section data-markdown>
+                    <textarea data-template>
+                            ### SaaS PaaS 등 용어 정리 
+
+                            * Cloud의 대표적인 회사와 서비스들 
+
+                        </textarea>
+                </section>
+
+                <section data-markdown>
+                    <textarea data-template>
+                            ### Cloud가 등장하기 이전은.. 
+
+                            * Cloud의 대표적인 회사와 서비스들 
+
+                        </textarea>
+                </section>
+
+                <section data-markdown>
+                    <textarea data-template>
+                            ### Cloud가 등장하고 나서 
+
+                            * Cloud의 대표적인 회사와 서비스들 
+
+                        </textarea>
+                </section>
+
+                <section data-markdown>
+                    <textarea data-template>
+                            ### Cloud가 등장할 수 있던 배경
+
+                            * Virtualization 
+
+                        </textarea>
+                </section>
+
+            </section>
+
+            <section>
+                <section data-markdown>
+                    <textarea data-template>
+                            ## Introduction to Python 
+
+                            ### Python 실습 
+                        </textarea>
+                </section>
+
+                <section data-markdown>
+                    <textarea data-template>
+                            ## 같이 살펴볼 단원들 
+
+                            * 02-1 숫자형
+                            * 02-2 문자열 자료형
+                            * 02-3 리스트 자료형
+                            * 03-1 if문
+                            * 03-3 for문
+                        </textarea>
+                </section>
+
+                <section data-markdown>
+                    <textarea data-template>
+                            ## 연습문제 0. 
+
+                            * 주어진 수가 홀수인지 짝수인지 구하시오
+                             * Hint : If문과 % 연산을 이용!
+                        </textarea>
+                </section>
+
+                <section data-markdown>
+                    <textarea data-template>
+                            ## 연습문제 1. 
+
+                            * 행수를 입력받아 각 행에 다음과 같이 별표를 다음과 같이 찍어봅시다!
+                             * Hint : for문을 이용!
+
+                            ```
+                            *
+                            **
+                            ***
+                            ****
+                            ```
+                        </textarea>
+                </section>
+
+                <section data-markdown>
+                    <textarea data-template>
+                            ### 연습문제 2.
+
+                            * 최근 핫한 영화들의 평균 평점을 구해보세요
+                            * 세 영화들의 평점의 합을 구하세요 
+                            * (Adv.) 가장 평점이 높은 영화는 몇점인가요?
+                             * Hint : for문과 덧셈, 나눗셈을 이용!
+
+                            <table>
+                                <thead>
+                                    <td>
+                                        영화
+                                    </td>
+                                    <td>
+                                        평점
+                                    </td>
+                                </thead>
+                                <tr>
+                                    <td>
+                                        토이 스토리4
+                                    </td>
+                                    <td>
+                                        9.35
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        알라딘
+                                    </td>
+                                    <td>
+                                        9.44
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        기생충
+                                    </td>
+                                    <td>
+                                        9.09
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        D-War
+                                    </td>
+                                    <td>
+                                        7.55
+                                    </td>
+                                </tr>
+
+                            </table>
+                        </textarea>
+                </section>
+
+                <section data-markdown>
+                    <textarea data-template>
+                            ## Reference
+
+                            * https://wikidocs.net
+                        </textarea>
+                </section>
+            </section>
+            <section>
+                <section data-markdown>
+                    ### Flask로 Web Application Server
+
+                    * Bot 개발을 위한 첫걸음
+                </section>
+                <section data-markdown>
+                    ### Flask Python Library 설치
+
+                    ```
+                    pip install flask
+                    ```
+
+                    OR
+
+                    ```
+                    File > Settings > Project > Project Interpreter
+                    ```
+
+                </section>
+                <section data-markdown>
+                    ### Home Page 만들기
+
+                    ```
+                    from flask import Flask
+
+                    app = Flask(__name__)
+
+                    @app.route('/')
+                    def index():
+                    return 'this is my homepage!'
+
+                    if __name__ == '__main__':
+                    app.run()
+                    ```
+                </section>
+                <section data-markdown>
+                    ### 도전 과제 : Welcome! 홈페이지 만들기
+
+                    * http://localhost:8000/ 호출시 다음과 같이
+                    출력하는 홈페이지
+
+                    ```
+                    환영합니다! 누구누구의 홈페이지입니다!
+                    ```
+
+                    * http://localhost:8000/introduction 호출시 다음과 같이
+                    출력하는 홈페이지
+
+                    ```
+                    저는 ~~하는 사람입니다. 
+                    ```
+
+                </section>
+            </section>
+            <section style="text-align: left;">
+                <h1>THE END</h1>
+                <h2>Is there any questions?</h2>
+                <p>
+                    - <a href="mailto:amos.doan@gmail.com">amos.doan@gmail.com</a> <br>
+                    - <a href="https://mossol.net">mossol.net</a> <br>
+                </p>
+            </section>
+        </div>
+    </div>
+
+    <script src="js/reveal.js"></script>
+
+    <script>
+        // More info about config & dependencies:
+        // - https://github.com/hakimel/reveal.js#configuration
+        // - https://github.com/hakimel/reveal.js#dependencies
+        Reveal.initialize({
+            hash: true,
+            dependencies: [
+                { src: 'plugin/markdown/marked.js' },
+                { src: 'plugin/markdown/markdown.js' },
+                { src: 'plugin/notes/notes.js', async: true },
+                { src: 'plugin/highlight/highlight.js', async: true }
+            ]
+        });
+    </script>
+</body>
+
+</html>
