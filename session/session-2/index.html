@@ -1,0 +1,361 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>OpenCollege - Bot 개발로 시작하는 프로그래밍 #0</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/monokai.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h3>Open College - <br />Bot개발로 시작하는 프로그래밍 프로젝트</h3>
+                <h4>Session #2 2019/07/12</h4>
+                <p>
+                    <small>Created by <a href="https://mossol.net">Amos Dawn</a></small>
+                </p>
+            </section>
+
+            <section>
+                <section>
+                    <h3>근황 Talk</h3>
+                    <h4>다들 2주간 평안히 지내셨나요?</h4>
+                </section>
+
+                <section data-markdown>
+                    <textarea data-template>
+                            ## Today's TODO 
+
+                            * <bdi style="color:skyblue;">[60 min.]</bdi> Python 감잡기 
+                             * <bdi style="color:skyblue;">[10 min.]</bdi> Break time
+                            * <bdi style="color:skyblue;">[60 min.]</bdi> Flask 감잡기 
+                             * <bdi style="color:skyblue;">[10 min.]</bdi> Break time
+                            * <bdi style="color:skyblue;">[40 min.]</bdi> Free coding time
+                        </textarea>
+                </section>
+
+                <section data-markdown>
+                    <textarea data-template>
+                            ## Today's Objective 
+
+                            * Python 감을 잡아보자 
+                            * <bdi style="color:skyblue;">Flask</bdi>로 입력을 받는 <bdi style="color:skyblue;">Server</bdi>를 만들어보자
+                        </textarea>
+                </section>
+            </section>
+
+            <section>
+                <section data-markdown>
+                    <textarea data-template>
+                            ## Introduction to Python 
+
+                            ### Python 실습 
+                        </textarea>
+                </section>
+
+                <section data-markdown>
+                    <textarea data-template>
+                            ## 같이 살펴볼 단원들 
+
+                            * 02-2 문자열 자료형
+                            * 02-3 리스트 자료형
+                            * 03-3 for문
+                            * 04-1 함수
+                        </textarea>
+                </section>
+
+                <section data-markdown>
+                    <textarea data-template>
+                            ## 표준 입출력 
+
+                            * 까만 화면으로부터 문자열을 받는 것은 input() 함수로 한다.
+
+                            ```
+                            a = input("문자열을 입력하세요")
+                            ```
+                            * 까만 화면에 문자열을 출력하는 것은 print() 함수로 한다. 
+
+                            ```
+                            print("안녕?")
+                            ```
+                        </textarea>
+                </section>
+
+                <section data-markdown>
+                    <textarea data-template>
+                            ## 변수란? 
+
+                            * 변수는 메모리 상에 저장되는 어떤 값의 이름이다!
+                            * =은 해당 변수에 어떤 값을 저장하는 것이다
+                        </textarea>
+                </section>
+
+                <section data-markdown>
+                    <textarea data-template>
+                            ## 정수형 변수 
+
+                            * 말 그대로 계산이 가능한 숫자 
+                            * 다른 Type의 변수는 int() 함수를 이용한다.
+
+                            ```
+                            a = "1"
+                            b = int(a)
+                            ```
+                        </textarea>
+                </section>
+
+                <section data-markdown>
+                    <textarea data-template>
+                            ## 문자열? 
+
+                            * 계산이 불가능한 텍스트 (그림이다)
+                            * 다른 Type의 변수를 문자열로 바꾸기 위해서는 str() 함수를 이용한다.
+
+                            ```
+                            a = 1
+                            b = str(a)
+                            ```
+
+                            * 문자열의 덧셈은 이어붙이기다.
+
+                            ```
+                            name = "김도한"
+                            introduction = "제 이름은" + name + "입니다."
+                            ```
+
+                        </textarea>
+                </section>
+
+                <section data-markdown>
+                    <textarea data-template>
+                            ## 리스트 
+
+                            * 변수들을 모은 말그대로 리스트
+                            * Index로 쉽게 쉽게 접근이 가능하다. 
+
+                            ```
+                            a = [1, 2, 3]
+                            print(a[1])
+                            ```
+
+                            * 연속된 숫자의 리스트는 range() 함수를 이용한다.
+
+                            ```
+                            a = range(10) // 0 <= a < 10
+                            b = range(1, 10) // 1 <= b < 10
+                            ```
+
+                        </textarea>
+                </section>
+
+                <section data-markdown>
+                    <textarea data-template>
+                            ## 함수 
+
+                            * 반복되는 로직들을 모아놓은 Input Output을 갖는 모듈
+
+                            ```
+                            def 함수명(매개변수): // 매개변수는 없을 수도 있다!
+                                함수로직
+                                return 아웃풋 // 없을 수도 있다!
+                            ```
+
+                            * 함수의 호출 
+
+                            ```
+                            b = 함수(매개변수)
+                            ```
+
+                        </textarea>
+                </section>
+
+                <section data-markdown>
+                    <textarea data-template>
+                            ## 연습문제 0. 
+
+                            * for문을 이용하여 1단만 찍어봅시다!
+
+                            ```
+                            1X1 = 1
+                            1X2 = 2
+                            1X3 = 3
+                            ...
+                            ```
+
+                            * for문을 이용하여 구구단을 찍어봅시다!
+
+                            ```
+                            1X1 = 1
+                            1X2 = 2
+                            1X3 = 3
+                            ..
+                            ..
+                            9X9 = 81
+                            ```
+                        </textarea>
+                </section>
+
+                <section data-markdown>
+                    <textarea data-template>
+                            ## 연습문제 1. 
+
+                            * for문, if문을 이용하여 10까지 짝수만 찍어봅시다!
+
+                            ```
+                            2
+                            4
+                            6
+                            8
+                            10
+                            ```
+
+                            * n을 입력받아 n까지 홀수만 찍어봅시다! 
+
+                            ```
+                            숫자를 입력하세요 : 10
+                            1
+                            3
+                            5
+                            7
+                            9
+                            ```
+                        </textarea>
+                </section>
+                <section data-markdown>
+                        <textarea data-template>
+                                ## 연습문제 2. 
+    
+                                * 두 수를 입력받고 사칙 연산을 함수를 작성하여 다음과 같은 프로그램을 구현하시오
+    
+                                ```
+                                첫 번째 수를 입력하세요 : 1
+                                두 번째 수를 입력하세요 : 3
+                                함수1 - 덧셈결과 :  4
+                                함수2 - 뺄셈결과 : -2
+                                함수3 - 곱셈결과 : 3
+                                함수4 - 나눗셈 결과 : 0.3333
+                                ```
+                               </textarea>
+                    </section>
+
+                <section data-markdown>
+                    <textarea data-template>
+                            ## Reference
+
+                            * https://wikidocs.net
+                        </textarea>
+                </section>
+            </section>
+            <section>
+                <section data-markdown>
+                    ### Flask로 Web Application Server
+
+                    * Bot 개발을 위한 첫걸음
+                </section>
+
+                <section data-markdown>
+                    ### URL의 형식 
+
+                    ```
+                    http://localhost/서울시/송파구?동=잠실동
+                    ```
+                    * localhost 이하를 Path라 한다.
+                    * 송파구 뒤의 물음표 이하를 Query Parameter라 한다.
+
+                </section>
+
+                <section data-markdown>
+                    ### Web API 만들기
+
+                    ```
+                    from flask import Flask
+                    from flask import request
+
+                    app = Flask(__name__)
+
+                    @app.route('/hello/&ltname&gt')
+                    def index(name):
+                        return "Hello " + name
+
+                    @app.route('/profile')
+                    def profile():
+                        age = request.args.get('age')
+                        return "My age is " + age
+
+                    if __name__ == '__main__':
+                        app.run()
+                    ```
+                </section>
+                <section data-markdown>
+                    ### 도전 과제 : Welcome! Web API만들기
+
+                    * http://localhost:8000/{name} 호출시 다음과 같이
+                    출력하는 홈페이지
+
+                    ```
+                    환영합니다! ${name}의 홈페이지입니다!
+                    ```
+
+                    * http://localhost:8000/{name}?family={count} 호출시 다음과 같이
+                    출력하는 홈페이지
+
+                    ```
+                    ${name}님의 가족은 ${count}명입니다.
+                    ```
+
+                </section>
+                <section data-markdown>
+                    ### Reference 
+
+                    * https://www.tutorialspoint.com/flask/
+                </section>
+            </section>
+            <section style="text-align: left;">
+                <h1>THE END</h1>
+                <h2>Is there any questions?</h2>
+                <p>
+                    - <a href="mailto:amos.doan@gmail.com">amos.doan@gmail.com</a> <br>
+                    - <a href="https://mossol.net">mossol.net</a> <br>
+                </p>
+            </section>
+        </div>
+    </div>
+
+    <script src="js/reveal.js"></script>
+
+    <script>
+        // More info about config & dependencies:
+        // - https://github.com/hakimel/reveal.js#configuration
+        // - https://github.com/hakimel/reveal.js#dependencies
+        Reveal.initialize({
+            hash: true,
+            dependencies: [
+                { src: 'plugin/markdown/marked.js' },
+                { src: 'plugin/markdown/markdown.js' },
+                { src: 'plugin/notes/notes.js', async: true },
+                { src: 'plugin/highlight/highlight.js', async: true }
+            ]
+        });
+    </script>
+</body>
+
+</html>
